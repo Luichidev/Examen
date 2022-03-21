@@ -18,18 +18,23 @@ public class Invoice {
     this.invoiceID = id;
   }
 
-  public boolean isLesThan(Invoice i) {
-    boolean isLess = false;
-
-    if (this.date.before(i.date)) {
-      isLess = true;
-    } else if (i.date.before(this.date)) {
-      isLess = false;
-    } else {
-      isLess = this.amount < i.amount;
-    }
-
-    return isLess;
+  public int isLesThan(Invoice i) {
+	  int isLess = 0;
+		if (this.date.before(i.date)) {
+			isLess = -1;
+		}else if (i.date.before(this.date)) {
+			isLess = 1;
+		}else {
+			if (this.amount < i.amount) {
+				isLess = -1;
+			}else if (this.amount > i.amount) {
+				isLess = 1;
+			}else {
+				isLess = 0;
+			}
+		}
+		
+		return isLess;
   }
 
   public String getDate() {
@@ -37,5 +42,19 @@ public class Invoice {
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
     date = formatter.format(this.date);
     return date;
+  }
+  
+  public String toString() {
+	String info = "";
+	info += "{ id: " + this.invoiceID;
+	info += ", Description.: " + this.description;
+	info += ", Amount: " + this.amount;
+	info += ", Date.: " + getDate();
+	info += "}"; 
+	return info;
+  }
+  
+  public int getAmount() {
+	  return this.amount;
   }
 }

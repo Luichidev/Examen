@@ -1,0 +1,18 @@
+01/02/2018
+100
+Material de construcción
+05/04/2018
+300
+Transporte
+05/08/2018
+300
+Materiales de oficina
+20/12/2018
+500
+Cestas de navidad
+20/12/2020
+550
+Cestas de navidad 2020
+15/12/2022
+700
+Cestas de navidad 2022
