@@ -6,6 +6,22 @@ import java.util.Date;
 
 public class Main {
   public static void main(String[] args) {
+	//Examen 02	  
+	  String file = "tablero.txt";
+	  
+	  Tauler t = new Tauler();
+	  t.inicialitza(file, 3); 
+	  t.tornJoc();
+	  t.tornJoc();
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	//Examen 01
+	 /*
 	ArrayList<Client> clientList = new ArrayList<Client>(); 
 	String file = "invoicesRoberto.txt";
 	Client newClient = new Client("Roberto");
@@ -23,6 +39,7 @@ public class Main {
 	clientList.add(newClient);
 	
 	writeClientData(clientList);
+	*/
   }
   
   
@@ -47,7 +64,7 @@ public class Main {
 			inv = new Invoice(date, description, amount);
 			cli.addInvoice(inv);
 		}
-		
+		in.close();
 	} catch (IOException e) {
 		e.fillInStackTrace();
 	}
